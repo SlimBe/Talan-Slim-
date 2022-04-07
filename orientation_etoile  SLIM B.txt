@@ -1,0 +1,36 @@
+fonction Tri(ref T :tableau[1..8] de car) :tab;
+  var i,j, :entier;
+      Char, Char2: 
+  début
+  pour i=1 à i=7 faire
+  pour j=8 à i+1 faire
+   Char= ASCII(t[i])
+   Char2= ASCII(t[j])
+        si ASCII[j] > ASCII[j-1] alors
+          echange(T, j, j-1);
+        finsi
+      finpour
+    finpour
+  fin
+finfonction
+Fonction recherche(Ref t:tableau [1..n] de caractére, var v : chaine de caractére):booléen
+    a=1
+    b=n
+    trouve= faux 
+  Répeter 
+    m=(a+b)div2
+     si ASCII(t[m])=ASCII(v) alors trouve=vrai
+       sinon si ASCII(t[m])<ASCII(v) alors a=m+1
+                       sinon b=m-1
+             finsi
+      finsi
+   jusqu'à (trouve=vrai) ou (a>b)
+ Finfonction  
+-----------------------------------------
+Variables nomEtoile : chaine de caractére
+          Début 
+  Tab = tri (t)
+  Afficher ("Saisir nom de l'étoile")
+  Saisir (nomEtoile)
+  Recherche (nomEtole,Tab)
+fin
