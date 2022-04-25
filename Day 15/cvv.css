@@ -1,0 +1,33 @@
+* {
+background-image: URL("a1.png");
+background-attachment: fixed;
+}
+
+
+p
+{
+
+color: blue;
+font-size: 1.3em;
+font-family:arial,impact;
+text-align: justify;
+
+}
+h1
+{
+text-align: center;
+border: 1.7px black solid;
+border-radius: 15px;
+box-shadow: 5px 5px 5px black;
+}
+
+h2
+{
+text-align: left;
+}
+
+img
+{
+ display: block;
+ margin: 0px auto;
+}
