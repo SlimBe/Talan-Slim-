@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<Evenements>
+
+  <Evenement>
+    <titre>lancement d'un nouveau livre</titre>
+    <theme>culturel</theme>
+    <date>25-05-2022</date>
+    <lieu>cite de la culture</lieu>
+    <budget>800 DNT</budget>
+    <activites>
+      <activite>
+         <titreact>seance de photo </titreact>
+         <dureeact>une heure</dureeact>
+      </activite>
+      <activite>
+         <titreact>debat</titreact>
+         <dureeact>une heures</dureeact>
+       </activite>
+      <activite>
+         <titreact>conference de presse</titreact>
+         <dureeact>une heure et demi </dureeact>
+      </activite>
+    </activites>
+    <participants>
+
+      <invites>
+       <invite>
+         <nominv>slim berrais </nominv>
+         <IDinv>01</IDinv>
+         <NEinv>dar thakafa</NEinv>
+       </invite>
+       <invite>
+         <nominv>ahmed ben dhaya </nominv>
+         <IDinv>02</IDinv>
+         <NEinv>IFT</NEinv>
+       </invite>
+       <invite>
+         <nominv>Ayoub belhadj salah </nominv>
+         <IDinv>03</IDinv>
+         <NEinv>la presse</NEinv>
+       </invite>
+      </invites>
+
+      <intervenants>
+        <intervenant>
+          <nomint>wahed hamed </nomint>
+          <IDint>01</IDint>
+          <NEint>NA</NEint>
+          <langue>francais</langue>
+        </intervenant>
+        <intervenant>
+          <nomint>amal yahoui</nomint>
+          <IDint>02</IDint>
+          <NEint>NA</NEint>
+          <langue>francais</langue>
+        </intervenant>
+      </intervenants>
+
+    </participants>
+  </Evenement>
+
+
+
+</Evenements>
