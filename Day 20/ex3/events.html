@@ -4,43 +4,43 @@
 
 <meta charset=utf-8 />
 
-<script>
 
-function getxhr(){
-  try { xhr=new XMLHttpRequest(); }
-  catch(e){
-    try{xhr=new ActiveXObject("Microsoft.XMLHTTP");}
-    catch(e1){
-      alert("erreur");
-    }
-  }
-  return xhr;
-}
-   function ajax(){
-   xhr= getxhr();
-
-    xhr.onreadystatechange=function(){
-       if(xhr.readyState==4 && xhr.status==200){
-        var  obxml=xhr.responseXML;
-
-         document.getElementById("evenement").innerHTML=obxml.getElementByTagName("titre").textContent;
-
-
-
-       }
-}
-xhr.open("GET","evenement.xml",true);
-xhr.send();
-}
-
-
-
-</script>
 
 </head>
 
 <body>
+  <script>
 
+  function getxhr(){
+    try { xhr=new XMLHttpRequest(); }
+    catch(e){
+      try{xhr=new ActiveXObject("Microsoft.XMLHTTP");}
+      catch(e1){
+        alert("erreur");
+      }
+    }
+    return xhr;
+  }
+     function ajax(){
+     xhr= getxhr();
+
+      xhr.onreadystatechange=function(){
+         if(xhr.readyState==4 && xhr.status==200){
+         obxml=xhr.responseXML;
+
+           document.getElementById("evenement").innerHTML=obxml.getElementsByTagName('titre').item(0).textContent;
+
+
+
+         }
+  }
+  xhr.open("GET","evenement.xml",true);
+  xhr.send();
+  }
+
+
+
+  </script>
 	<button onclick="ajax()">evenement</button>
   <div id="evenement"></div>
 
