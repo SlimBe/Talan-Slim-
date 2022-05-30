@@ -1,0 +1,63 @@
+pm.test("statut check=400", () => {
+    pm.response.to.have.status(200);
+      
+
+});
+pm.test("check id", () => {
+     pm.expect(pm.response.json()).to.have.property("id", 2464461);
+});
+pm.test("check name", () => {
+     pm.expect(pm.response.json()).to.have.property("name",'Tunisia');
+});
+pm.test("timezone", () => {
+     pm.expect(pm.response.json()).to.have.property("timezone",3600);
+});
+
+
+
+pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
+
+pm.test("Content-Type is present", function () {
+    pm.response.to.have.header("Content-Type");
+});
+
+pm.test("id", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.id).to.eql(2464461);
+pm.test("base", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.base).to.eql("stations");
+});
+});
+
+pm.test("lon", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.coord.lon).to.eql(9);
+});
+
+
+pm.test("lat", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.coord.lat).to.eql(34);
+});
+
+pm.test("temp", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.main.temp).to.eql(312.19);
+});
+
+pm.test("id sys", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.sys.country).to.eql("TN");
+});
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("id");
+});
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("");
+
+});
+
+var jsonObject = xml2Json(responseBody);

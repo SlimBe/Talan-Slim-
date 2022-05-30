@@ -1,0 +1,481 @@
+{
+	"info": {
+		"_postman_id": "3779f23b-82b3-44ef-ae5d-baed05d3ec56",
+		"name": "ex2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21188249"
+	},
+	"item": [
+		{
+			"name": "get by city name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"statut check=400\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"      \r",
+							"\r",
+							"});\r",
+							"pm.test(\"check id\", () => {\r",
+							"     pm.expect(pm.response.json()).to.have.property(\"id\", 2464461);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?q=Tunisia&appid=78c63342c3509fbdeed3c6a1dc5950cc&Country=TN",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Tunisia"
+						},
+						{
+							"key": "appid",
+							"value": "78c63342c3509fbdeed3c6a1dc5950cc"
+						},
+						{
+							"key": "ID",
+							"value": "2464461",
+							"disabled": true
+						},
+						{
+							"key": "Country",
+							"value": "TN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by lon lat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?lat=36.806389&lon=10.181667&appid=78c63342c3509fbdeed3c6a1dc5950cc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "36.806389"
+						},
+						{
+							"key": "lon",
+							"value": "10.181667"
+						},
+						{
+							"key": "appid",
+							"value": "78c63342c3509fbdeed3c6a1dc5950cc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get 5day",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/forecast?q=Tunisia&appid=78c63342c3509fbdeed3c6a1dc5950cc",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Tunisia"
+						},
+						{
+							"key": "appid",
+							"value": "78c63342c3509fbdeed3c6a1dc5950cc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post station",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"external_id\": \"SF_TEST001\",\r\n  \"name\": \"San Francisco Test Station\",\r\n  \"latitude\": 37.76,\r\n  \"longitude\": -122.43,\r\n  \"altitude\": 150\r\n}"
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/stations?appid=78c63342c3509fbdeed3c6a1dc5950cc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "78c63342c3509fbdeed3c6a1dc5950cc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get station id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/stations/6294bf408885c200018f5f6a?appid=78c63342c3509fbdeed3c6a1dc5950cc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations",
+						"6294bf408885c200018f5f6a"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "78c63342c3509fbdeed3c6a1dc5950cc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get mesurment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/measurements?station_id=6294c1ca8885c200018f5f71&type=m&limit=100&appid=78c63342c3509fbdeed3c6a1dc5950cc&from=1480300000&to=1480700000",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"measurements"
+					],
+					"query": [
+						{
+							"key": "station_id",
+							"value": "6294c1ca8885c200018f5f71"
+						},
+						{
+							"key": "type",
+							"value": "m"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "appid",
+							"value": "78c63342c3509fbdeed3c6a1dc5950cc"
+						},
+						{
+							"key": "from",
+							"value": "1480300000"
+						},
+						{
+							"key": "to",
+							"value": "1480700000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post mesurement",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"station_id\": \"6294c1ca8885c200018f5f71\",\r\n    \"dt\": 1479817340,\r\n    \"temperature\": 18.7,\r\n    \"wind_speed\": 1.2,\r\n    \"wind_gust\": 3.4,\r\n    \"pressure\": 1021,\r\n    \"humidity\": 87,\r\n    \"rain_1h\": 2,\r\n    \"clouds\": [\r\n      {\r\n          \"condition\": \"NSC\"\r\n      }\r\n    ]\r\n  }\r\n]\r\n                     \r\n   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/measurements?appid=78c63342c3509fbdeed3c6a1dc5950cc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"measurements"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "78c63342c3509fbdeed3c6a1dc5950cc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put station",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"external_id\": \"SF_UPD001\",\r\n  \"name\": \"San Francisco Updated Station\",\r\n  \"latitude\": 37.80,\r\n  \"longitude\": -122.47,\r\n  \"altitude\": 143\r\n}\r\n                    \r\n"
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/stations/6294c0008885c200018f5f6c?appid=78c63342c3509fbdeed3c6a1dc5950cc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations",
+						"6294c0008885c200018f5f6c"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "78c63342c3509fbdeed3c6a1dc5950cc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete station",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/stations/6294c0008885c200018f5f6c?appid=78c63342c3509fbdeed3c6a1dc5950cc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations",
+						"6294c0008885c200018f5f6c"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "78c63342c3509fbdeed3c6a1dc5950cc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"statut check=400\", () => {",
+					"    pm.response.to.have.status(200);",
+					"      ",
+					"",
+					"});",
+					"pm.test(\"check id\", () => {",
+					"     pm.expect(pm.response.json()).to.have.property(\"id\", 2464461);",
+					"});",
+					"pm.test(\"check name\", () => {",
+					"     pm.expect(pm.response.json()).to.have.property(\"name\",'Tunisia');",
+					"});",
+					"pm.test(\"timezone\", () => {",
+					"     pm.expect(pm.response.json()).to.have.property(\"timezone\",3600);",
+					"});",
+					"",
+					"",
+					"",
+					"pm.test(\"Response time is less than 200ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(200);",
+					"});",
+					"",
+					"pm.test(\"Content-Type is present\", function () {",
+					"    pm.response.to.have.header(\"Content-Type\");",
+					"});",
+					"",
+					"pm.test(\"id\", function () {",
+					"    var jsonData = pm.response.json();",
+					"    pm.expect(jsonData.id).to.eql(2464461);",
+					"pm.test(\"base\", function () {",
+					"    var jsonData = pm.response.json();",
+					"    pm.expect(jsonData.base).to.eql(\"stations\");",
+					"});",
+					"});",
+					"",
+					"pm.test(\"lon\", function () {",
+					"    var jsonData = pm.response.json();",
+					"    pm.expect(jsonData.coord.lon).to.eql(9);",
+					"});",
+					"",
+					"",
+					"pm.test(\"lat\", function () {",
+					"    var jsonData = pm.response.json();",
+					"    pm.expect(jsonData.coord.lat).to.eql(34);",
+					"});",
+					"",
+					"pm.test(\"temp\", function () {",
+					"    var jsonData = pm.response.json();",
+					"    pm.expect(jsonData.main.temp).to.eql(312.19);",
+					"});",
+					"",
+					"pm.test(\"id sys\", function () {",
+					"    var jsonData = pm.response.json();",
+					"    pm.expect(jsonData.sys.country).to.eql(\"TN\");",
+					"});",
+					"pm.test(\"Body matches string\", function () {",
+					"    pm.expect(pm.response.text()).to.include(\"id\");",
+					"});",
+					"pm.test(\"Body matches string\", function () {",
+					"    pm.expect(pm.response.text()).to.include(\"\");",
+					"});"
+				]
+			}
+		}
+	]
+}
