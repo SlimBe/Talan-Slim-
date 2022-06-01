@@ -1,0 +1,17 @@
+exercise 1:
+req 1:/CDlist/CD/performance/composition
+req 2:/CDlist/CD/performance[soloist]/composition 
+req 3://performance[orchestra and not(soloist)]
+req 4:/CDlist/CD/performance[orchestra[(text () ="London Symphony Orchestra")]]/soloist|/CDlist/CD/publisher[(text () ="Deutsche Grammopho")]
+req 5:/CDlist/CD[performance[orchestra[(text () ="London Symphony Orchestra")]]]
+
+
+
+exercise 2:
+1-req 1://award[5]
+2-req 2://award[6]/author
+3-req 3://award[year[text()="2000"]]/title
+4-req 4://award[title[text()="Possession"]]/author
+5-req 5://award[author[text()="J M Coetzee"]]/title
+6-req 6://award[year>=1995]/author
+7-req 7:count (//award)
