@@ -1,0 +1,43 @@
+package test;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Firsttest {
+	public static void main(String[] args) {
+		//System.setProperty("webdriver.msedgedriver.driver" , "C:\\Users\\sberrais\\eclipse-workspace\\slim\\src\\test\\resources\\Driver\\msedgedriver.exe");
+		WebDriverManager.edgedriver().driverVersion("102.0.1245.30").setup();
+		WebDriver driver = new EdgeDriver();
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));  
+		 driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));  
+		 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		
+		
+		driver.get("http://demo.guru99.com/test/newtours");
+		driver.findElement(By.linkText("REGISTER")).click();
+		driver.findElement(By.name("firstName")).sendKeys("Slim");
+		driver.findElement(By.name("lastName")).sendKeys("Berrais");
+		driver.findElement(By.name("phone")).sendKeys("52861592");
+		driver.findElement(By.name("userName")).sendKeys("slim.berrais@talan.com");
+		driver.findElement(By.name("address1")).sendKeys("Riadh Andaloss C33");
+		driver.findElement(By.name("city")).sendKeys("Ariana");
+		driver.findElement(By.name("state")).sendKeys("Tunisia/Tunis");
+		driver.findElement(By.name("postalCode")).sendKeys("2048");
+		driver.findElement(By.name("country")).sendKeys("TUNISIA");
+		driver.findElement(By.name("email")).sendKeys("sora3173");
+		driver.findElement(By.name("password")).sendKeys("Nesrine1245.");
+		driver.findElement(By.name("confirmPassword")).sendKeys("Nesrine1245.");
+		driver.findElement(By.name("submit")).click();
+		
+		
+		
+		
+		
+	}
+	
+}
