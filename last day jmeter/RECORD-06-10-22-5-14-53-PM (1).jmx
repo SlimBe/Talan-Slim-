@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="5.4.2">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="RECORD 06-10-22 5.14.53 PM" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot; Not A;Brand&quot;;v=&quot;99&quot;, &quot;Chromium&quot;;v=&quot;102&quot;, &quot;Google Chrome&quot;;v=&quot;102&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">login.yahoo.com</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">udc.yahoo.com</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <intProp name="HTTPSampler.concurrentPool">6</intProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://login.yahoo.com/forgot?lang=fr-FR&amp;src=ym&amp;done=https%3A%2F%2Ffr.mail.yahoo.com%2F%3Fguce_referrer%3DaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8%26guce_referrer_sig%3DAQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI&amp;username=slim.berrais%40talan.com" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="src" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">src</stringProp>
+                  <stringProp name="Argument.value">ym</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="lang" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">lang</stringProp>
+                  <stringProp name="Argument.value">fr-FR</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="done" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">done</stringProp>
+                  <stringProp name="Argument.value">https://fr.mail.yahoo.com/?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="username" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">username</stringProp>
+                  <stringProp name="Argument.value">slim.berrais@talan.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">forgot</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <doubleProp>
+                <name>RandomTimer.range</name>
+                <value>0.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://udc.yahoo.com/v2/public/yql?yhlVer=2&amp;yhlClient=rapid&amp;yhlS=794204015&amp;yhlCT=2&amp;yhlBTMS=1654879812488&amp;yhlClientVer=3.53.30&amp;yhlRnd=ELd2mHziGS5X9tpW&amp;yhlCompressed=0" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="yhlVer" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlVer</stringProp>
+                  <stringProp name="Argument.value">2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlClient" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlClient</stringProp>
+                  <stringProp name="Argument.value">rapid</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlCT" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlCT</stringProp>
+                  <stringProp name="Argument.value">2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlClientVer" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlClientVer</stringProp>
+                  <stringProp name="Argument.value">3.53.30</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlRnd" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlRnd</stringProp>
+                  <stringProp name="Argument.value">ELd2mHziGS5X9tpW</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlS" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlS</stringProp>
+                  <stringProp name="Argument.value">794204015</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlBTMS" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlBTMS</stringProp>
+                  <stringProp name="Argument.value">1654879812488</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlCompressed" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlCompressed</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="q" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">q</stringProp>
+                  <stringProp name="Argument.value">select * from x where a = &apos;{&quot;bp&quot;:{&quot;_a1s&quot;:&quot;d=AQABBOmxZ2ICEA0vGBi3FZu-k_njVY3WT6UFEgEBAQEDaWJxYgAAAAAA_eMAAA&amp;S=AQAAAh2FEgTn60o6klBKk5S_sLY&amp;j=WORLD&quot;,&quot;_guc&quot;:&quot;AQEBAQFiaQNicUIj8wTp&quot;,&quot;_pl&quot;:&quot;1&quot;,&quot;A_v&quot;:&quot;3.53.30&quot;,&quot;A_cn&quot;:&quot;VERSIONED-PROD&quot;,&quot;_R&quot;:&quot;https://login.yahoo.com/?.src=ym&amp;lang=fr-FR&quot;,&quot;_bt&quot;:&quot;rapid&quot;,&quot;lang&quot;:&quot;fr-FR&quot;,&quot;src&quot;:&quot;ym&quot;,&quot;done&quot;:&quot;https://fr.mail.yahoo.com/?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI&quot;,&quot;authMechanism&quot;:&quot;secondary&quot;,&quot;sessionIndex&quot;:&quot;Qg--&quot;,&quot;username&quot;:&quot;slim.berrais@talan.com&quot;,&quot;A_pr&quot;:&quot;https&quot;,&quot;A_tzoff&quot;:&quot;1&quot;,&quot;A_cnf&quot;:&quot;{\&quot;spaceid\&quot;:794204015,\&quot;location\&quot;:\&quot;https://login.yahoo.com/account/challenge/username?lang=fr-FR&amp;src=ym\&quot;,\&quot;referrer\&quot;:\&quot;https://login.yahoo.com/?.src=ym&amp;lang=fr-FR\&quot;}&quot;},&quot;r&quot;:[{&quot;t&quot;:&quot;pv&quot;,&quot;s&quot;:&quot;794204015&quot;,&quot;pp&quot;:{&quot;A_sid&quot;:&quot;z6RK5RkA0YiKHcp1&quot;,&quot;_w&quot;:&quot;login.yahoo.com/account/challenge/username?lang=fr-FR&amp;src=ym&quot;,&quot;pt&quot;:&quot;utility&quot;,&quot;ver&quot;:&quot;nodejs&quot;,&quot;pg_name&quot;:&quot;usernameChallenge&quot;,&quot;gm_np&quot;:&quot;yahoo&quot;,&quot;src&quot;:&quot;ym&quot;,&quot;p_sec&quot;:&quot;DEFAULT_SECTION&quot;,&quot;p_subsec&quot;:&quot;DEFAULT_SUBSECTION&quot;,&quot;test&quot;:&quot;mbr-fido-1fa-login,mbr-recent-activity,mbr-simplified-global-reg&quot;,&quot;pct&quot;:&quot;signin&quot;,&quot;_a1s&quot;:&quot;d=AQABBOmxZ2ICEA0vGBi3FZu-k_njVY3WT6UFEgEBAQEDaWJxYgAAAAAA_eMAAA&amp;S=AQAAAh2FEgTn60o6klBKk5S_sLY&amp;j=WORLD&quot;,&quot;_guc&quot;:&quot;AQEBAQFiaQNicUIj8wTp&quot;,&quot;A_&quot;:&quot;1&quot;,&quot;A_sr&quot;:&quot;1920x1080&quot;,&quot;A_vr&quot;:&quot;1920x1040&quot;,&quot;A_do&quot;:&quot;1&quot;,&quot;A_ib&quot;:&quot;1565x912&quot;,&quot;A_ob&quot;:&quot;1920x1040&quot;,&quot;A_srr&quot;:&quot;1&quot;},&quot;_ts&quot;:&quot;1654879812&quot;,&quot;_ms&quot;:&quot;485&quot;,&quot;lv&quot;:[]}],&quot;yrid&quot;:&quot;&quot;,&quot;optout&quot;:&quot;0&quot;,&quot;nol&quot;:&quot;0&quot;}&apos;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">v2/public/yql</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[2]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://login.yahoo.com/account/challenge/username?lang=fr-FR&amp;src=ym&amp;done=https%3A%2F%2Ffr.mail.yahoo.com%2F%3Fguce_referrer%3DaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8%26guce_referrer_sig%3DAQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI&amp;authMechanism=secondary&amp;sessionIndex=Qg--&amp;username=slim.berrais%40talan.com" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="sessionIndex" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sessionIndex</stringProp>
+                  <stringProp name="Argument.value">Qg--</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="src" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">src</stringProp>
+                  <stringProp name="Argument.value">ym</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="authMechanism" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">authMechanism</stringProp>
+                  <stringProp name="Argument.value">secondary</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="lang" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">lang</stringProp>
+                  <stringProp name="Argument.value">fr-FR</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="done" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">done</stringProp>
+                  <stringProp name="Argument.value">https://fr.mail.yahoo.com/?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="username" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">username</stringProp>
+                  <stringProp name="Argument.value">slim.berrais@talan.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="verifyYid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">verifyYid</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">sXTKerI8jpy</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="deviceCapability" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">deviceCapability</stringProp>
+                  <stringProp name="Argument.value">{&quot;pa&quot;:{&quot;status&quot;:false}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sessionIndex" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sessionIndex</stringProp>
+                  <stringProp name="Argument.value">Qg--</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="acrumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">acrumb</stringProp>
+                  <stringProp name="Argument.value">pUZnGmnp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="browser-fp-data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">browser-fp-data</stringProp>
+                  <stringProp name="Argument.value">{&quot;language&quot;:&quot;fr-FR&quot;,&quot;colorDepth&quot;:24,&quot;deviceMemory&quot;:8,&quot;pixelRatio&quot;:1,&quot;hardwareConcurrency&quot;:4,&quot;timezoneOffset&quot;:-60,&quot;timezone&quot;:&quot;Africa/Lagos&quot;,&quot;sessionStorage&quot;:1,&quot;localStorage&quot;:1,&quot;indexedDb&quot;:1,&quot;openDatabase&quot;:1,&quot;cpuClass&quot;:&quot;unknown&quot;,&quot;platform&quot;:&quot;Win32&quot;,&quot;doNotTrack&quot;:&quot;unknown&quot;,&quot;plugins&quot;:{&quot;count&quot;:5,&quot;hash&quot;:&quot;2c14024bf8584c3f7f63f24ea490e812&quot;},&quot;canvas&quot;:&quot;canvas winding:yes~canvas&quot;,&quot;webgl&quot;:1,&quot;webglVendorAndRenderer&quot;:&quot;Google Inc. (Intel)~ANGLE (Intel, Intel(R) HD Graphics 530 Direct3D11 vs_5_0 ps_5_0, D3D11)&quot;,&quot;adBlock&quot;:0,&quot;hasLiedLanguages&quot;:0,&quot;hasLiedResolution&quot;:0,&quot;hasLiedOs&quot;:0,&quot;hasLiedBrowser&quot;:0,&quot;touchSupport&quot;:{&quot;points&quot;:0,&quot;event&quot;:0,&quot;start&quot;:0},&quot;fonts&quot;:{&quot;count&quot;:48,&quot;hash&quot;:&quot;62d5bbf307ed9e959ad3d5ad6ccd3951&quot;},&quot;audio&quot;:&quot;124.04347527516074&quot;,&quot;resolution&quot;:{&quot;w&quot;:&quot;1920&quot;,&quot;h&quot;:&quot;1080&quot;},&quot;availableResolution&quot;:{&quot;w&quot;:&quot;1040&quot;,&quot;h&quot;:&quot;1920&quot;},&quot;ts&quot;:{&quot;serve&quot;:1654879812188,&quot;render&quot;:1654879812614}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="displayName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">displayName</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="context" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">context</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="shortCountryCode" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">shortCountryCode</stringProp>
+                  <stringProp name="Argument.value">TN</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="username" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">username</stringProp>
+                  <stringProp name="Argument.value">52864884</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">account/challenge/username</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[3]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <doubleProp>
+                <name>RandomTimer.range</name>
+                <value>11758.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+              <stringProp name="ConstantTimer.delay">5879</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 11758 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://udc.yahoo.com/v2/public/yql?yhlVer=2&amp;yhlClient=rapid&amp;yhlS=794204015&amp;yhlCT=2&amp;yhlBTMS=1654879824306&amp;yhlClientVer=3.53.30&amp;yhlRnd=LvGS5gGid6WZQmqE&amp;yhlCompressed=0" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="yhlVer" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlVer</stringProp>
+                  <stringProp name="Argument.value">2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlClient" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlClient</stringProp>
+                  <stringProp name="Argument.value">rapid</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlCT" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlCT</stringProp>
+                  <stringProp name="Argument.value">2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlClientVer" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlClientVer</stringProp>
+                  <stringProp name="Argument.value">3.53.30</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlRnd" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlRnd</stringProp>
+                  <stringProp name="Argument.value">LvGS5gGid6WZQmqE</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlS" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlS</stringProp>
+                  <stringProp name="Argument.value">794204015</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlBTMS" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlBTMS</stringProp>
+                  <stringProp name="Argument.value">1654879824306</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlCompressed" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlCompressed</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="q" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">q</stringProp>
+                  <stringProp name="Argument.value">select * from x where a = &apos;{&quot;bp&quot;:{&quot;_a1s&quot;:&quot;d=AQABBOmxZ2ICEA0vGBi3FZu-k_njVY3WT6UFEgEBAQEDaWJxYgAAAAAA_eMAAA&amp;S=AQAAAh2FEgTn60o6klBKk5S_sLY&amp;j=WORLD&quot;,&quot;_guc&quot;:&quot;AQEBAQFiaQNicUIj8wTp&quot;,&quot;_pl&quot;:&quot;1&quot;,&quot;A_v&quot;:&quot;3.53.30&quot;,&quot;A_cn&quot;:&quot;VERSIONED-PROD&quot;,&quot;_R&quot;:&quot;https://login.yahoo.com/account/challenge/username?lang=fr-FR&amp;src=ym&quot;,&quot;_bt&quot;:&quot;rapid&quot;,&quot;lang&quot;:&quot;fr-FR&quot;,&quot;src&quot;:&quot;ym&quot;,&quot;done&quot;:&quot;https://fr.mail.yahoo.com/?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI&quot;,&quot;authMechanism&quot;:&quot;secondary&quot;,&quot;sessionIndex&quot;:&quot;Qg--&quot;,&quot;acrumb&quot;:&quot;pUZnGmnp&quot;,&quot;A_pr&quot;:&quot;https&quot;,&quot;A_tzoff&quot;:&quot;1&quot;,&quot;A_cnf&quot;:&quot;{\&quot;spaceid\&quot;:794204015,\&quot;location\&quot;:\&quot;https://login.yahoo.com/account/challenge/recaptcha?lang=fr-FR&amp;src=ym\&quot;,\&quot;referrer\&quot;:\&quot;https://login.yahoo.com/account/challenge/username?lang=fr-FR&amp;src=ym\&quot;}&quot;},&quot;r&quot;:[{&quot;t&quot;:&quot;pv&quot;,&quot;s&quot;:&quot;794204015&quot;,&quot;pp&quot;:{&quot;A_sid&quot;:&quot;BbDS9gESGdMw4eWh&quot;,&quot;_w&quot;:&quot;login.yahoo.com/account/challenge/recaptcha?lang=fr-FR&amp;src=ym&quot;,&quot;pt&quot;:&quot;utility&quot;,&quot;ver&quot;:&quot;nodejs&quot;,&quot;pg_name&quot;:&quot;recaptchaChallenge&quot;,&quot;gm_np&quot;:&quot;yahoo&quot;,&quot;src&quot;:&quot;ym&quot;,&quot;p_sec&quot;:&quot;DEFAULT_SECTION&quot;,&quot;p_subsec&quot;:&quot;DEFAULT_SUBSECTION&quot;,&quot;test&quot;:&quot;mbr-fido-1fa-login,mbr-recent-activity,mbr-simplified-global-reg&quot;,&quot;pct&quot;:&quot;signin&quot;,&quot;_a1s&quot;:&quot;d=AQABBOmxZ2ICEA0vGBi3FZu-k_njVY3WT6UFEgEBAQEDaWJxYgAAAAAA_eMAAA&amp;S=AQAAAh2FEgTn60o6klBKk5S_sLY&amp;j=WORLD&quot;,&quot;_guc&quot;:&quot;AQEBAQFiaQNicUIj8wTp&quot;,&quot;A_&quot;:&quot;1&quot;,&quot;A_sr&quot;:&quot;1920x1080&quot;,&quot;A_vr&quot;:&quot;1920x1040&quot;,&quot;A_do&quot;:&quot;1&quot;,&quot;A_ib&quot;:&quot;1565x912&quot;,&quot;A_ob&quot;:&quot;1920x1040&quot;,&quot;A_srr&quot;:&quot;1&quot;},&quot;_ts&quot;:&quot;1654879824&quot;,&quot;_ms&quot;:&quot;305&quot;,&quot;lv&quot;:[]}],&quot;yrid&quot;:&quot;&quot;,&quot;optout&quot;:&quot;0&quot;,&quot;nol&quot;:&quot;0&quot;}&apos;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">v2/public/yql</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[4]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://login.yahoo.com/account/challenge/recaptcha?lang=fr-FR&amp;src=ym&amp;done=https%3A%2F%2Ffr.mail.yahoo.com%2F%3Fguce_referrer%3DaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8%26guce_referrer_sig%3DAQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI&amp;authMechanism=secondary&amp;sessionIndex=Qg--&amp;acrumb=pUZnGmnp" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="sessionIndex" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sessionIndex</stringProp>
+                  <stringProp name="Argument.value">Qg--</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="acrumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">acrumb</stringProp>
+                  <stringProp name="Argument.value">pUZnGmnp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="src" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">src</stringProp>
+                  <stringProp name="Argument.value">ym</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="authMechanism" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">authMechanism</stringProp>
+                  <stringProp name="Argument.value">secondary</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="lang" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">lang</stringProp>
+                  <stringProp name="Argument.value">fr-FR</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="done" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">done</stringProp>
+                  <stringProp name="Argument.value">https://fr.mail.yahoo.com/?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="g-recaptcha-response" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">g-recaptcha-response</stringProp>
+                  <stringProp name="Argument.value">03AGdBq26Aifx54Pt57WH3IF9RPHBO10U2e9rTK-eMyBw6-BvQ5QspOAcRQgrzhESVn1dso8rTQjusx-OeJ0WTFsYBTpm-_Sguh1aKQB8UVWasX-W1f44YvRiZcsG4HXjJ-3vhp0BbFC4tg82w5UOjYES4FLi8UQJfI91F8LnPnEI5xLXa-VjRWd1Hd8VsUaMJwTiTwWzdwDVZP_ngCt50Jg8drqwE3chv0qPdGhd2KkFECDuzWi92zaqHcQogJkTMNee9ilgSdEjt4XuIT8f3jeiWEtFjO6-Uyxuga-jWLUMJvxehZpRvEa5HTB1EXEt8vs4J9wpxdWZcJ3-I6We4YVYq9_QYjcDLiCj401t7lAMrhS7UWvU1LC3w3WrsZNeVptVgJzwBh1-77aXkW7z2U4jr_C8BDxbPJbZiguRTApYfgWoSaAKdnx7Gxhr54-r7J-GRn9DGw3QFlZJpmFOgr4Yh9FdSRWSf6aJh4zJfcyxiKlvg5bg7yLCaTckFqDrGUPQis9bmQcRHc4kmyb2Lyvn-Fxk-hgRXnKHWzJ11YLOAQZ75ro0QoN0YUrqSsKDI-NNr9QARIZHv6gCeoJOmu6lItBbET5ybjIJpn3HGnb1H3XHsvq3D2OQRZeDhAh_9OA8yupRMWOc7o1zbklnX5tY91b8PhHnztWjg4fAcuIyObOCNZ4UnjO_rUtll_5Rq3RUvZiovrQ5PqG4lO5Dh_Et1A_YmboXvLRmrB0Y9yX3ssKYyKT4ejKCoyzEcEVYFVyWaQZDN4DMZroWk2wSvYN4PTiqyZlCT0UJK-ARHD68QgRTgKrhtEEV13OQhmHPJq8b-ckSef1QJJh4Zb_7k2r8ubAoglwMgAeS9UhqsX0TUohCmyy_PfVy47-bOHcSVk_twuBYGhwXzYb7JZabyFhyDpN_x4Fy4lW6WOeBHWt49WrUBsX2Eozol_QdNsigf1IBTTgA1Msl3hafIRMR6jbEomzfD2s8Qx-n8voG9H35wYoTJ2V7cSz19Ud7g1GGgQGf8_u0xnZXnLSsMzFTOY2hvEsmRz392NNzwuchUS18XiCrKR2eRqO--pVxrwXADXIKuzWs_ADGzuwTj2tEP3OENx1l3nXZC-B76sRFBWjRMAs5rekUS6gmRAafjbxxCaAZ9eGMrobWeiZbFRNACw-uJyjXooYvPDyyHNWFmhEbMgdTATsYcqdMJEqpvH6OWWU8NWXvItdF3ToNcS1eOHQU5IYbaHd-_KkWXJWeGGWalMnQRwsvdAMMuRQTtA-zdj1q6cWuhBMXFgtZtByv0QpbZOLAS1il0q68WAnWFXEHY1k8UZ50aCOeZaA59xUvbXU32oOUkQ6_2F9o3iee-gEl7NJX8q_RWNKtLh3MzSd4OsfQANFVnzeInOIDWFJl_P4LdAJjIk_iOoL_0uRxMGZKkNJNRLfr5qBykiQZ0viqFU5uR4cwQijl04JCY5E2aSNPNayITne2V7Egkekab00fDukoUDjcQ6uQCAsCbrOIdbWvMMmT_uqoKwJBUvdegPHneQB053JuyzuBpfhE60YbXKVEveYDsyuFlLSneOnQq0We8KOJgs50</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sessionIndex" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sessionIndex</stringProp>
+                  <stringProp name="Argument.value">Qg--</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="acrumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">acrumb</stringProp>
+                  <stringProp name="Argument.value">pUZnGmnp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="context" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">context</stringProp>
+                  <stringProp name="Argument.value">secondary</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">account/challenge/recaptcha</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[5]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <doubleProp>
+                <name>RandomTimer.range</name>
+                <value>5342.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+              <stringProp name="ConstantTimer.delay">2671</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 5342 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://udc.yahoo.com/v2/public/yql?yhlVer=2&amp;yhlClient=rapid&amp;yhlS=794204015&amp;yhlCT=2&amp;yhlBTMS=1654879829695&amp;yhlClientVer=3.53.30&amp;yhlRnd=pG4kU2fFlWAZn3Pv&amp;yhlCompressed=0" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="yhlVer" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlVer</stringProp>
+                  <stringProp name="Argument.value">2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlClient" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlClient</stringProp>
+                  <stringProp name="Argument.value">rapid</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlCT" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlCT</stringProp>
+                  <stringProp name="Argument.value">2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlClientVer" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlClientVer</stringProp>
+                  <stringProp name="Argument.value">3.53.30</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlRnd" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlRnd</stringProp>
+                  <stringProp name="Argument.value">pG4kU2fFlWAZn3Pv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlS" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlS</stringProp>
+                  <stringProp name="Argument.value">794204015</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlBTMS" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlBTMS</stringProp>
+                  <stringProp name="Argument.value">1654879829695</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlCompressed" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlCompressed</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="q" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">q</stringProp>
+                  <stringProp name="Argument.value">select * from x where a = &apos;{&quot;bp&quot;:{&quot;_a1s&quot;:&quot;d=AQABBOmxZ2ICEA0vGBi3FZu-k_njVY3WT6UFEgEBAQEDaWJxYgAAAAAA_eMAAA&amp;S=AQAAAh2FEgTn60o6klBKk5S_sLY&amp;j=WORLD&quot;,&quot;_guc&quot;:&quot;AQEBAQFiaQNicUIj8wTp&quot;,&quot;_pl&quot;:&quot;1&quot;,&quot;A_v&quot;:&quot;3.53.30&quot;,&quot;A_cn&quot;:&quot;VERSIONED-PROD&quot;,&quot;_R&quot;:&quot;https://login.yahoo.com/account/challenge/recaptcha?lang=fr-FR&amp;src=ym&quot;,&quot;_bt&quot;:&quot;rapid&quot;,&quot;lang&quot;:&quot;fr-FR&quot;,&quot;src&quot;:&quot;ym&quot;,&quot;done&quot;:&quot;https://fr.mail.yahoo.com/?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI&quot;,&quot;authMechanism&quot;:&quot;secondary&quot;,&quot;acrumb&quot;:&quot;pUZnGmnp&quot;,&quot;sessionIndex&quot;:&quot;Qg--&quot;,&quot;A_pr&quot;:&quot;https&quot;,&quot;A_tzoff&quot;:&quot;1&quot;,&quot;A_cnf&quot;:&quot;{\&quot;spaceid\&quot;:794204015,\&quot;location\&quot;:\&quot;https://login.yahoo.com/account/challenge/phone-verify?lang=fr-FR&amp;src=ym\&quot;,\&quot;referrer\&quot;:\&quot;https://login.yahoo.com/account/challenge/recaptcha?lang=fr-FR&amp;src=ym\&quot;}&quot;},&quot;r&quot;:[{&quot;t&quot;:&quot;pv&quot;,&quot;s&quot;:&quot;794204015&quot;,&quot;pp&quot;:{&quot;A_sid&quot;:&quot;ruVUP8KyUUAaXvH0&quot;,&quot;_w&quot;:&quot;login.yahoo.com/account/challenge/phone-verify?lang=fr-FR&amp;src=ym&quot;,&quot;pt&quot;:&quot;utility&quot;,&quot;ver&quot;:&quot;nodejs&quot;,&quot;pg_name&quot;:&quot;phoneVerifyChallenge&quot;,&quot;gm_np&quot;:&quot;yahoo&quot;,&quot;src&quot;:&quot;ym&quot;,&quot;p_sec&quot;:&quot;DEFAULT_SECTION&quot;,&quot;p_subsec&quot;:&quot;DEFAULT_SUBSECTION&quot;,&quot;test&quot;:&quot;mbr-fido-1fa-login,mbr-recent-activity,mbr-simplified-global-reg&quot;,&quot;pct&quot;:&quot;signin&quot;,&quot;expn&quot;:&quot;verify-code&quot;,&quot;pd&quot;:&quot;bearersms&quot;,&quot;_a1s&quot;:&quot;d=AQABBOmxZ2ICEA0vGBi3FZu-k_njVY3WT6UFEgEBAQEDaWJxYgAAAAAA_eMAAA&amp;S=AQAAAh2FEgTn60o6klBKk5S_sLY&amp;j=WORLD&quot;,&quot;_guc&quot;:&quot;AQEBAQFiaQNicUIj8wTp&quot;,&quot;A_&quot;:&quot;1&quot;,&quot;A_sr&quot;:&quot;1920x1080&quot;,&quot;A_vr&quot;:&quot;1920x1040&quot;,&quot;A_do&quot;:&quot;1&quot;,&quot;A_ib&quot;:&quot;1565x912&quot;,&quot;A_ob&quot;:&quot;1920x1040&quot;,&quot;A_srr&quot;:&quot;1&quot;},&quot;_ts&quot;:&quot;1654879829&quot;,&quot;_ms&quot;:&quot;694&quot;,&quot;lv&quot;:[]}],&quot;yrid&quot;:&quot;&quot;,&quot;optout&quot;:&quot;0&quot;,&quot;nol&quot;:&quot;0&quot;}&apos;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">v2/public/yql</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[6]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://login.yahoo.com/account/challenge/phone-verify?lang=fr-FR&amp;src=ym&amp;done=https%3A%2F%2Ffr.mail.yahoo.com%2F%3Fguce_referrer%3DaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8%26guce_referrer_sig%3DAQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI&amp;authMechanism=secondary&amp;acrumb=pUZnGmnp&amp;sessionIndex=Qg--" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="sessionIndex" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sessionIndex</stringProp>
+                  <stringProp name="Argument.value">Qg--</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="acrumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">acrumb</stringProp>
+                  <stringProp name="Argument.value">pUZnGmnp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="src" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">src</stringProp>
+                  <stringProp name="Argument.value">ym</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="authMechanism" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">authMechanism</stringProp>
+                  <stringProp name="Argument.value">secondary</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="lang" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">lang</stringProp>
+                  <stringProp name="Argument.value">fr-FR</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="done" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">done</stringProp>
+                  <stringProp name="Argument.value">https://fr.mail.yahoo.com/?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="code" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">code</stringProp>
+                  <stringProp name="Argument.value">78987987</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="numberAttemptsRemaining" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">numberAttemptsRemaining</stringProp>
+                  <stringProp name="Argument.value">3</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sessionIndex" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sessionIndex</stringProp>
+                  <stringProp name="Argument.value">Qg--</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="verifyCode" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">verifyCode</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="browser-fp-data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">browser-fp-data</stringProp>
+                  <stringProp name="Argument.value">{&quot;language&quot;:&quot;fr-FR&quot;,&quot;colorDepth&quot;:24,&quot;deviceMemory&quot;:8,&quot;pixelRatio&quot;:1,&quot;hardwareConcurrency&quot;:4,&quot;timezoneOffset&quot;:-60,&quot;timezone&quot;:&quot;Africa/Lagos&quot;,&quot;sessionStorage&quot;:1,&quot;localStorage&quot;:1,&quot;indexedDb&quot;:1,&quot;openDatabase&quot;:1,&quot;cpuClass&quot;:&quot;unknown&quot;,&quot;platform&quot;:&quot;Win32&quot;,&quot;doNotTrack&quot;:&quot;unknown&quot;,&quot;plugins&quot;:{&quot;count&quot;:5,&quot;hash&quot;:&quot;2c14024bf8584c3f7f63f24ea490e812&quot;},&quot;canvas&quot;:&quot;canvas winding:yes~canvas&quot;,&quot;webgl&quot;:1,&quot;webglVendorAndRenderer&quot;:&quot;Google Inc. (Intel)~ANGLE (Intel, Intel(R) HD Graphics 530 Direct3D11 vs_5_0 ps_5_0, D3D11)&quot;,&quot;adBlock&quot;:0,&quot;hasLiedLanguages&quot;:0,&quot;hasLiedResolution&quot;:0,&quot;hasLiedOs&quot;:0,&quot;hasLiedBrowser&quot;:0,&quot;touchSupport&quot;:{&quot;points&quot;:0,&quot;event&quot;:0,&quot;start&quot;:0},&quot;fonts&quot;:{&quot;count&quot;:48,&quot;hash&quot;:&quot;62d5bbf307ed9e959ad3d5ad6ccd3951&quot;},&quot;audio&quot;:&quot;124.04347527516074&quot;,&quot;resolution&quot;:{&quot;w&quot;:&quot;1920&quot;,&quot;h&quot;:&quot;1080&quot;},&quot;availableResolution&quot;:{&quot;w&quot;:&quot;1040&quot;,&quot;h&quot;:&quot;1920&quot;},&quot;ts&quot;:{&quot;serve&quot;:1654879829341,&quot;render&quot;:1654879829809}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="displayName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">displayName</stringProp>
+                  <stringProp name="Argument.value">+21652864884</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="lastSentTime" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">lastSentTime</stringProp>
+                  <stringProp name="Argument.value">1654879829356</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="codeDigits" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">codeDigits</stringProp>
+                  <stringProp name="Argument.value">8</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="locale" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">locale</stringProp>
+                  <stringProp name="Argument.value">fr-FR</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="referenceId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">referenceId</stringProp>
+                  <stringProp name="Argument.value">47SCsqWoyTJ_oOscadw1IVJPuG0LovJ3_H5AMnx8HrNa0qHTRtDqcdsEBR7Hyo0ZPghRzZ4vpqa60x2HH1ASUlpdWaPQv4XV7ioGcsvYAbvGmTiTvRM9</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="obfuscatedPhone" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">obfuscatedPhone</stringProp>
+                  <stringProp name="Argument.value">+216 52 864 884</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">sXTKerI8jpy</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="acrumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">acrumb</stringProp>
+                  <stringProp name="Argument.value">pUZnGmnp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="context" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">context</stringProp>
+                  <stringProp name="Argument.value">ACCOUNT_ACCESS_FORGOT_ID</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="bearer" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">bearer</stringProp>
+                  <stringProp name="Argument.value">sms</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">account/challenge/phone-verify</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[7]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <doubleProp>
+                <name>RandomTimer.range</name>
+                <value>6371.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+              <stringProp name="ConstantTimer.delay">3185.5</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 6371 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://udc.yahoo.com/v2/public/yql?yhlVer=2&amp;yhlClient=rapid&amp;yhlS=794204015&amp;yhlCT=2&amp;yhlBTMS=1654879835839&amp;yhlClientVer=3.53.30&amp;yhlRnd=oyUDvNIOZNMi7G5F&amp;yhlCompressed=0" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="yhlVer" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlVer</stringProp>
+                  <stringProp name="Argument.value">2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlClient" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlClient</stringProp>
+                  <stringProp name="Argument.value">rapid</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlCT" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlCT</stringProp>
+                  <stringProp name="Argument.value">2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlClientVer" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlClientVer</stringProp>
+                  <stringProp name="Argument.value">3.53.30</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlRnd" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlRnd</stringProp>
+                  <stringProp name="Argument.value">oyUDvNIOZNMi7G5F</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlS" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlS</stringProp>
+                  <stringProp name="Argument.value">794204015</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlBTMS" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlBTMS</stringProp>
+                  <stringProp name="Argument.value">1654879835839</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="yhlCompressed" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">yhlCompressed</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="q" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">q</stringProp>
+                  <stringProp name="Argument.value">select * from x where a = &apos;{&quot;bp&quot;:{&quot;_a1s&quot;:&quot;d=AQABBOmxZ2ICEA0vGBi3FZu-k_njVY3WT6UFEgEBAQEDaWJxYgAAAAAA_eMAAA&amp;S=AQAAAh2FEgTn60o6klBKk5S_sLY&amp;j=WORLD&quot;,&quot;_guc&quot;:&quot;AQEBAQFiaQNicUIj8wTp&quot;,&quot;_pl&quot;:&quot;1&quot;,&quot;A_v&quot;:&quot;3.53.30&quot;,&quot;A_cn&quot;:&quot;VERSIONED-PROD&quot;,&quot;_R&quot;:&quot;https://login.yahoo.com/account/challenge/phone-verify?lang=fr-FR&amp;src=ym&quot;,&quot;_bt&quot;:&quot;rapid&quot;,&quot;lang&quot;:&quot;fr-FR&quot;,&quot;src&quot;:&quot;ym&quot;,&quot;done&quot;:&quot;https://fr.mail.yahoo.com/?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAIMbafV7qDj02_KeSBsPJKoYpP0eOUXy7vZCiJEiaBm0NO9vDSaE5oJuTiEISfg0xdT9Rn4OwztcR-h80-jZhTbZjlJQ26y5L-X6HMU3vB6MR9Kj7MiGZ7mYHWNGgeB4Z_p39MBU5UpAJKSuGaP9F69bHSrMQw4yc7dUJmy12kVI&quot;,&quot;authMechanism&quot;:&quot;secondary&quot;,&quot;acrumb&quot;:&quot;pUZnGmnp&quot;,&quot;sessionIndex&quot;:&quot;Qg--&quot;,&quot;A_pr&quot;:&quot;https&quot;,&quot;A_tzoff&quot;:&quot;1&quot;,&quot;A_cnf&quot;:&quot;{\&quot;spaceid\&quot;:794204015,\&quot;location\&quot;:\&quot;https://login.yahoo.com/account/challenge/phone-verify?lang=fr-FR&amp;src=ym\&quot;,\&quot;referrer\&quot;:\&quot;https://login.yahoo.com/account/challenge/phone-verify?lang=fr-FR&amp;src=ym\&quot;}&quot;},&quot;r&quot;:[{&quot;t&quot;:&quot;pv&quot;,&quot;s&quot;:&quot;794204015&quot;,&quot;pp&quot;:{&quot;A_sid&quot;:&quot;fTubCb7sWoJ0zf5Z&quot;,&quot;_w&quot;:&quot;login.yahoo.com/account/challenge/phone-verify?lang=fr-FR&amp;src=ym&quot;,&quot;pt&quot;:&quot;utility&quot;,&quot;ver&quot;:&quot;nodejs&quot;,&quot;pg_name&quot;:&quot;phoneVerifyChallenge&quot;,&quot;gm_np&quot;:&quot;yahoo&quot;,&quot;src&quot;:&quot;ym&quot;,&quot;p_sec&quot;:&quot;DEFAULT_SECTION&quot;,&quot;p_subsec&quot;:&quot;DEFAULT_SUBSECTION&quot;,&quot;test&quot;:&quot;mbr-fido-1fa-login,mbr-recent-activity,mbr-simplified-global-reg&quot;,&quot;pct&quot;:&quot;signin&quot;,&quot;expn&quot;:&quot;verify-code&quot;,&quot;pd&quot;:&quot;bearersms&quot;,&quot;_a1s&quot;:&quot;d=AQABBOmxZ2ICEA0vGBi3FZu-k_njVY3WT6UFEgEBAQEDaWJxYgAAAAAA_eMAAA&amp;S=AQAAAh2FEgTn60o6klBKk5S_sLY&amp;j=WORLD&quot;,&quot;_guc&quot;:&quot;AQEBAQFiaQNicUIj8wTp&quot;,&quot;A_&quot;:&quot;1&quot;,&quot;A_sr&quot;:&quot;1920x1080&quot;,&quot;A_vr&quot;:&quot;1920x1040&quot;,&quot;A_do&quot;:&quot;1&quot;,&quot;A_ib&quot;:&quot;1565x912&quot;,&quot;A_ob&quot;:&quot;1920x1040&quot;,&quot;A_srr&quot;:&quot;1&quot;},&quot;_ts&quot;:&quot;1654879835&quot;,&quot;_ms&quot;:&quot;839&quot;,&quot;lv&quot;:[]}],&quot;yrid&quot;:&quot;&quot;,&quot;optout&quot;:&quot;0&quot;,&quot;nol&quot;:&quot;0&quot;}&apos;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">v2/public/yql</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[8]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
